@@ -21,3 +21,5 @@ The CSV file loader is rigid in the handling of the files, this could be improve
 The checkout process assumes that StockItem prices stay constant, any updates to the StockItem 
 pricing, during a checkout tranaction could lead to inconsistent results. Going forward, only the sku ID should
 be stored in the OrderItem and the price looked up when requesting the order total.
+
+The thrown exceptions need to be simplified and documented to detail when each exception can be thrown
