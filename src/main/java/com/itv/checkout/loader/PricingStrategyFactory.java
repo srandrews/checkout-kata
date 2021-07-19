@@ -3,6 +3,7 @@ package com.itv.checkout.loader;
 import com.itv.checkout.excpetion.InvalidSpecialPriceFormatException;
 import com.itv.checkout.pricing.MultibuyPricingStrategy;
 import com.itv.checkout.pricing.PricingStrategy;
+import com.itv.checkout.utils.StringUtils;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -13,7 +14,7 @@ public class PricingStrategyFactory {
 
     public static PricingStrategy createPricingStrategy(String pricingStrategyText) {
 
-        if (pricingStrategyText==null || "".equals(pricingStrategyText)) {
+        if (StringUtils.emptyString(pricingStrategyText)) {
             return null;
         }
 
